@@ -44,10 +44,22 @@ spatio-temporal-policing-engine/
 └── README.md                   # Academic documentation
 
 
-## Key Features
+Key Features
 * Interactive Gradio Interface: A functional web-app where users can upload CDR files and receive visual pattern analysis.
 * Real-time Prediction UI: Designed custom Gradio components to display risk-priority alerts and temporal trends.
 * User-Centric Inputs: Simplified complex data entry into intuitive sliders and file-upload blocks.
 
 
+Getting Started
+
+Installation
+To set up the environment and install the necessary dependencies, run:
+
+pip install -r requirements.txt
+
+For the Running Application section:
+streamlit run app.py
+
 Developed as part of the Smart Policing initiative for the Centre for Human Security Studies.
+
+
