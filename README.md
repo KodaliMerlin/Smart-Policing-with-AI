@@ -1,19 +1,48 @@
-# Smart Policing: Spatio-Temporal Graph Attention Network (ST-GAT)
-### Internship Project | Centre for Human Security Studies (CHSS)
+# Spatio-Temporal Predictive Policing Engine Using Graph Attention Networks
 
-## Project Overview
-Developed during my tenure at **CHSS**, this project leverages advanced Deep Learning to assist law enforcement in predictive policing. By analyzing **Call Data Records (CDRs)** through a Spatio-Temporal Graph Attention Network, the system identifies high-risk criminal patterns and visualizes them for real-time decision-making.
+**Academic Affiliation:** Department of Computer Science and Engineering (Data Science)  
+**Project Guide:** Mrs. V. Munni  
 
-## UI/UX & Developer Role
-As the developer on this initiative, my focus was translating "Black Box" AI outputs into a **User-Centric Dashboard**.
-* **Intuitive Visualization:** Designed a map-based interface that simplifies complex graph nodes into readable heatmaps and risk-priority alerts.
-* **Data Storytelling:** Created a UI that allows non-technical law enforcement officers to filter data by time (Temporal) and location (Spatial) without manual query overhead.
-* **Performance:** Optimized the frontend to handle large-scale graph data rendering without lag, ensuring a smooth user experience.
-## Tech Stack
-* **UI Framework:** Gradio (Rapid AI Prototyping)
-* **Model:** ST-GAT (Spatio-Temporal Graph Attention Network)
-* **Deep Learning:** PyTorch / TensorFlow
-* **Data Processing:** Pandas, NumPy, NetworkX
+---
+
+##  Abstract & Overview
+
+Traditional spatial mapping in law enforcement often relies on static hotspot analysis, which fails to capture the dynamic, evolving nature of communication and mobility networks. This project introduces a **Spatio-Temporal Predictive Policing Engine** powered by **Graph Attention Networks (ST-GAT)**.
+
+By converting spatial zones and telemetric metadata into a dynamic network graph, the engine models the ebb and flow of anomalous activities. Crucially, to address the legal and constitutional "black box" problem of deep learning in law enforcement, this architecture integrates **Explainable AI (XAI)** via `GNNExplainer`. This ensures that every flagged anomaly provides transparent, mathematically reviewable evidence detailing exactly *why* a node was classified as high-risk, fulfilling the strict operational requirements of modern data protection frameworks.
+
+*Note: Due to legal restrictions regarding the storage and processing of actual Call Data Records (CDRs), this repository utilizes a robust data generation pipeline to create statistically sound, synthetic telemetric distributions for model validation.*
+
+---
+
+##  Core Architecture & Tech Stack
+
+This project is built strictly using a robust, purely Python-based data science and machine learning stack, avoiding unnecessary web-framework overhead.
+
+* **Data Manipulation & Processing:** Python, Pandas, NumPy
+* **Deep Learning & Graph Modeling:** PyTorch, PyTorch Geometric, NetworkX
+* **Explainable AI (XAI):** GNNExplainer
+* **Interactive Deployment Dashboard:** Streamlit, Plotly
+* **Reporting Output:** FPDF
+
+---
+
+##  Repository Structure
+
+```text
+spatio-temporal-policing-engine/
+│
+├── data/                       # Directory for generated synthetic CDRs and PDF reports
+│
+├── src/
+│   ├── data_pipeline.py        # Generates synthetic telemetric data and extracts node features
+│   ├── gat_model.py            # ST-GAT PyTorch architecture and XAI initialization
+│   └── report_engine.py        # Logic for automated PDF dossier generation
+│
+├── app.py                      # Main Streamlit dashboard deployment file
+├── requirements.txt            # Project dependencies
+└── README.md                   # Academic documentation
+
 
 ## Key Features
 * **Interactive Gradio Interface:** A functional web-app where users can upload CDR files and receive visual pattern analysis.
