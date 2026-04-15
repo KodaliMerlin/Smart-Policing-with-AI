@@ -45,9 +45,9 @@ spatio-temporal-policing-engine/
 
 
 ## Key Features
-* **Interactive Gradio Interface:** A functional web-app where users can upload CDR files and receive visual pattern analysis.
-* **Real-time Prediction UI:** Designed custom Gradio components to display risk-priority alerts and temporal trends.
-* **User-Centric Inputs:** Simplified complex data entry into intuitive sliders and file-upload blocks.
+* Interactive Gradio Interface: A functional web-app where users can upload CDR files and receive visual pattern analysis.
+* Real-time Prediction UI: Designed custom Gradio components to display risk-priority alerts and temporal trends.
+* User-Centric Inputs: Simplified complex data entry into intuitive sliders and file-upload blocks.
 
----
-*Developed as part of the Smart Policing initiative for the Centre for Human Security Studies.*
+
+Developed as part of the Smart Policing initiative for the Centre for Human Security Studies.
